@@ -1,0 +1,62 @@
+<html>
+
+<title>
+Fractals
+</title>
+
+<head>
+  <!--removes margin, padding, border in body-->
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+    }
+  </style>
+
+  <!--initialize lsystem and a various fractals' lsystems-->
+  <script src="lsystem.js" type="text/javascript"></script>
+  <script src="dragon.js" type="text/javascript"></script>
+  <script src="koch.js" type="text/javascript"></script>
+  <script src="arrowhead.js" type="text/javascript"></script>
+  <script src="gosper.js" type="text/javascript"></script>
+
+</head>
+<body>
+    Iterations
+    <input type="text" id="iterations" value="0">
+    <button type="button" onclick="arrowhead.redraw()">Arrowhead</button>
+    <button type="button" onclick="dragon.redraw()">Dragon</button>
+    <button type="button" onclick="gosper.redraw()">Gosper</button>
+    <button type="button" onclick="koch.redraw()">Koch</button>
+  <!--create a canvas-->
+  <canvas id="canvas"></canvas>
+
+  <!--fullscreens the canvas and resizes it when window is resized-->
+  <script src="fractalCanvas.js" type="text/javascript"></script>
+
+  <!-- step the dragon curve several times-->
+  <script type="text/javascript">
+    /*var t0 = performance.now();
+    dragon.iterate(8);
+    var t1 = performance.now();
+    dragon.draw();
+    var t2 = performance.now();
+    console.log("Iterate: " + (t1-t0) + "ms Draw: " + (t2-t1) + "ms Total: " + (t2-t0) +"ms");*/
+
+    /*koch.iterate(5);
+    koch.draw();
+    ctx.scale(0.1,0.1);*/
+    /*cantor.iterate(5);
+    cantor.draw();*/
+
+    /*arrowhead.iterate(6);
+    arrowhead.draw();*/
+
+    /*plant.iterate(4);
+    plant.draw();*/
+  </script>
+
+</body>
+
+</html>
